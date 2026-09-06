@@ -6,4 +6,4 @@ class City(BaseModel):
     name: str
     additional_info: str
 
-    model_config = ConfigDict(form_atributes=True)
+    model_config = ConfigDict(from_attributes=True)
