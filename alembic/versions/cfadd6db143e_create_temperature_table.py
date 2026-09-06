@@ -24,9 +24,9 @@ def upgrade() -> None:
     op.create_table(
         "temperature",
         sa.Column("id", sa.Integer(), nullable=False),
-        sa.Column("city_id", sa.Integer(), nullable=True),
-        sa.Column("date_time", sa.DateTime(), nullable=True),
-        sa.Column("temperature", sa.Float(), nullable=True),
+        sa.Column("city_id", sa.Integer(), nullable=False),
+        sa.Column("date_time", sa.DateTime(), nullable=False),
+        sa.Column("temperature", sa.Float(), nullable=False),
         sa.ForeignKeyConstraint(
             ["city_id"],
             ["city.id"],
